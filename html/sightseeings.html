@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGHT</title>
+    <link rel="stylesheet" href="css/sightseeings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <section id="subparagraph1">
+    <div class="grid_sight active">
+
+        <div class="photo_sight">
+            <img src="sightseeings/opera.jpg">
+        </div>
+
+        <div class="text_block_sight"></div>
+        <div class="text_sight">
+            <h1 class="text_title_sight">ТОП МІСЦЬ ДЛЯ ВІДВІДВІДУВАННЯ</h1>
+            <h2 class="text_name_sight">ОПЕРНИЙ ТЕАТР</h2>
+            <div class="text_text">
+                <p class="about_sight">Якщо ви приїхали до Одеси, не можна обійти увагою оперу — ​один із символів міста. Обов’язково знайдіть час, щоб сходити на виставу. Інтер’єр і оздоблення театру просто надзвичайні. Будівля схожа на палац з персонажами з казок. Кожен спектакль подарує вам відчуття чогось чарівного, трепетного, душевного. Навіть якщо до цього ви не були шанувальником опери і балету, повірте, все зміниться!</p>
+            </div>
+        </div>
+          <div class="draft_right_scroll_sight">
+       
+        <i class="arrow right_sight"></i>
+   </div>
+   <div class="draft_left_scroll_sight">
+      <i class="arrow left_sight"></i>
+   </div>
+    </div>
+    </section>
+    
+   <script>
+    const slide = document.querySelector('.grid_sight');
+const cta__btn = document.querySelector('.cta__btn > button');
+     
+
+cta__btn.addEventListener('click', function(){
+   slide.classList.toggle('active');
+});
+   
+    
+    </script> 
+    
+</body></html>

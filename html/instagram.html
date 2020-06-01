@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insta</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 15px;
+            background: white;
+        }
+
+        img {
+            padding-left: 1px;
+            width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            margin-bottom: .3em;
+            color: #ff941f;
+            text-align: center;
+            letter-spacing: 0.7px;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            margin-bottom: .2em;
+            text-align: center;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+
+        }
+
+
+        /* hover */
+        .location-listing {
+            position: relative;
+        }
+
+        .location-image {
+            line-height: 0;
+            overflow: hidden;
+            grid-column-start: 1;
+        }
+
+        .location-image img {
+            filter: blur(0px);
+            transition: filter 0.3s ease-in;
+            transform: scale(1.1);
+        }
+
+        .location-title {
+            font-size: 2em;
+            font-weight: ;
+            text-decoration: none;
+            z-index: 1;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity .5s;
+            background: rgba(90, 0, 10, 0.4);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .location-listing:hover .location-title {
+            opacity: 1;
+        }
+
+        .location-listing:hover .location-image img {
+            filter: blur(2px);
+        }
+
+        i {
+            z-index: 2;
+            color: white;
+            font-size: 2rem;
+            padding-right: 7px;
+
+        }
+
+        /* media*/
+        @media (hover: none) {
+            .location-title {
+                opacity: 1;
+            }
+
+            .location-image img {
+                filter: blur(2px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="child-page-listing">
+
+        <h2>Фото туристів</h2>
+        <h3> Поділіться своїми фотографіями подорожей з нами, хештегуючи свої зображення за допомогою #odessamama</h3>
+
+        <div class="grid-container">
+
+            <article id="3685" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/chemoil/" target="_blank">
+                    <i class="fab fa-instagram"></i> chemoil </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/1.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3688" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/soulinthewaves/" target="_blank">
+                    <i class="fab fa-instagram"></i> soulinthewaves </a>
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/2.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3691" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/tani.goncharova/" target="_blank">
+                    <i class="fab fa-instagram"></i> tani.goncharova
+
+                </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="310" height="172" src="instagram/12.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3694" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/julia_peshinskaya/" target="_blank">
+                    <i class="fab fa-instagram"></i> julia_peshinskaya </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/18.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3697" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/kristal_foto/" target="_blank">
+                    <i class="fab fa-instagram"></i> kristal_foto </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/6.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/samovarovruslan/" target="_blank">
+                    <i class="fab fa-instagram"></i> samovarovruslan </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/7.jpg" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/kirya_world/" target="_blank">
+                    <i class="fab fa-instagram"></i> kirya_world </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/22.jfif" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/vallerinova/" target="_blank">
+                    <i class="fab fa-instagram"></i> vallerinova
+
+                </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/10.jpg" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/sergey.yevich/" target="_blank">
+                    <i class="fab fa-instagram"></i> sergey.yevich
+
+                </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/11.jpg" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/mikhail_reva/" target="_blank">
+                    <i class="fab fa-instagram"></i> mikhail_reva </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/9.jpg" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

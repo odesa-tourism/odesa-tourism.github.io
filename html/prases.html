@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>explore</title>
+
+    <link rel="stylesheet" href="slider_css/slick.css" />
+    <link rel="stylesheet" href="slider_css/slick-theme.css" />
+    <link rel="stylesheet" href="css/phrases.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="section" id="phrase">
+        <div class="grid">
+
+            <div class="photo_phrases">
+                <img src="photo/phrases.png">
+            </div>
+            <div class="text_phrases">
+                <h1 class="main_phrase">Одеські фрази</h1>
+                <p>&nbsp Незвичайні одеські фрази давно стали крилатими. &nbsp &nbsp Одесити часто самі не помічають, як їх вимовляють,&nbsp &nbsp &nbspа ось для вуха туриста фраза звучить неправильно.
+                    З першої прочитаної фрази внутрішній голос починає говорити з єврейською вимовою.</p>
+            </div>
+
+            <div class="text_phrase">
+                <div class="first_phrase">
+                    <p>Щаc я зроблю вам скандал,
+                        і буде вам весело ...</p>
+                </div>
+                <div class="second_phrase">
+                    <p>Чому ні , коли так?</p>
+                </div>
+                <div class="third_phrase">
+                    <p>Ні, це таки не фонтан ...</p>
+                </div>
+                <div class="fourth_phrase">
+                    <p>Ви шо, з мізками посварилися?</p>
+                </div>
+                <div class="fifth_phrase">
+                    <p>Посміхайтесь, завтра буде
+                        <br /> ше гірше</p>
+                </div>
+                <div class="six_phrase">
+                    <p>Я дико перепрошую ....</p>
+                </div>
+                <div class="seven_phrase">
+
+                    <p>Фіма, не розчісуй мені нерви!</p>
+                </div>
+                <div class="eight_phrase">
+
+                    <p>Не крутіть мені мої фаберже!</p>
+                </div>
+                <div class="eight_phrase">
+
+                    <p>Я маю вам дещо сказати ...</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="slick.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $(".text_phrase").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                autoplayHoverPause: true,
+                autoplayTimeout: 4000
+
+            })
+        });
+    </script>
+
+
+</body></html>

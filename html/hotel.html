@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hotel</title>
+    <link rel="stylesheet" href="css/hotel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hotel_grid active">
+
+       
+
+        <div class="photo_hotel">
+            <img src="hotel/hotel1.jpg">
+        </div>
+
+        <div class="text_block_hotel"> </div>
+        <div class="text">
+            <h1 class="text_title_hotel">НАЙКРАЩІ ГОТЕЛІ</h1>
+            <h2 class="text_name_hotel">Готель “Maristella Marine Residence”</h2>
+            <div class="text_text_hotel">
+                <p class="description">
+                    Готель "Maristella Marine Residence" розташований у фешенебельному районі Одеси - на 10-й станції Великого Фонтану біля самої кромки моря, ближче всіх інших готелів міста. Марістела - «Морська Зірка», «Зірка морів» - ідеальне назву для готелю, чи не так? Здалеку вона дійсно нагадує корабель, пришвартований до причалу. Білосніжно-блакитна зовні, готель біля моря стоїть під вітрилом в очікуванні приємної подорожі.
+                    <br />Зручна інфраструктура готелю (Відстань до Міжнародного аеропорту - 6 км. До центру Одеси - 8 км. До залізничного вокзалу - 7 км), два ресторани (європейська і одеська кухня), можливість проводити банкети в готелі, власна тераса з видом на море, а також особливе ставлення до кожного гостя - робить наш <br />готель особливою і унікальною.
+                    <br /><br /><a href="https://maristella.com.ua/" target="_blank">https://maristella.com.ua/</a>
+                </p>
+            </div>
+            
+        </div>
+   <div class="draft_right_scroll">
+       
+        <i class="arrow right"></i>
+   </div>
+   <div class="draft_left_scroll">
+      <i class="arrow left"></i>
+   </div>
+</div>
+    <script>
+    const slide = document.querySelector('.hotel_grid');
+const cta__btn = document.querySelector('.cta__btn > button');
+     
+
+cta__btn.addEventListener('click', function(){
+   slide.classList.toggle('active');
+});
+   
+    
+    </script>
+</body></html>
