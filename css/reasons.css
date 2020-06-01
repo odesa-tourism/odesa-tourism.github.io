@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: ". photo photo photo photo . . . . . . ."
+
+        " . . text reasons text reasons text reasons . . . . . . ."
+        ". . . . . . text information text information text information text information text information .";
+}
+
+.photo_reasons {
+ grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-area: . photo photo photo photo . . . . . . .;
+
+}
+
+.photo_reasons img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.text_reasons {
+   grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    grid-area: . . text reasons text reasons text reasons . . . . . . .;
+    
+    
+}
+
+.text_information {
+    grid-column-start: 7;
+    grid-column-end: 11;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-area: . . . . . . text information text information text information text information text information .;
+}
+
+/*menu*/
+
+
+/*text inform slider*/
+.text_information p {
+    font-size: 21px;
+    text-align: center;
+    display: block;
+     position: relative;
+}
+
+.main {
+    font-size: 22px;
+    text-align: center;
+    color: lightsalmon;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/*5 reasons*/
+
+.text_reasons p {
+    font-size: 55px;
+    text-align: center;
+    line-height: 69px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    
+}
+
+
+.first p {
+    letter-spacing: 0.4px;
+    line-height: 2.1rem;
+}
+
+.second p {
+    letter-spacing: 0.5px;
+    line-height: 2.1rem;
+}
+
+.third p {
+    letter-spacing: 0.7px;
+    line-height: 2.1rem;
+}
+
+.fourth p {
+    letter-spacing: 0.5px;
+    line-height: 2rem;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.fifth p {
+    letter-spacing: 0.4px;
+    line-height: 2.1rem;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.first h1 {
+    margin-bottom: 3px;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.second h1 {
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.third h1 {
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.fourth h1 {
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.fifth h1 {
+
+    font-weight: 800;
+    font-size: 24px;
+}
+
+
+@media screen and (max-width: 992px) {
+.text_information p {
+    list-style-type: none;
+    font-size:10px;
+    letter-spacing: 1px;
+    margin-top: 0;
+}

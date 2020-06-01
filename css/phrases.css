@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+   
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:  repeat(10, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas: 
+        ". photo photo photo photo . . . . . . ."
+        ".. text_phrases text_phrases text_phrases text_phrases ......"
+        "......text_phrase text_phrase text_phrase  text_phrase  text_phrase . ";
+    background: white;
+    background-size: cover;
+}
+
+
+.photo_phrases{
+     grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-area: . photo photo photo photo . . . . . . .;
+    padding-left: 3px;
+    
+}
+.photo_phrases img {
+    width: 100%;
+    height: auto;
+   
+}
+
+
+.text_phrases {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    grid-area:.. text_phrases text_phrases text_phrases text_phrases ......;
+}
+
+.text_phrase {
+    grid-column-start: 6;
+    grid-column-end: 11;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    align-self: center;
+    grid-area: ......text_phrase text_phrase text_phrase  text_phrase  text_phrase .;
+    justify-self: center;
+}
+
+/*menu*/
+
+
+
+/*text phrases odesa*/
+
+.main_phrase {
+    font-size: 36px;
+    color: #ff941f;
+    text-align: center;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.text_phrases p {
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5rem;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    display: block;
+}
+
+/*text ha*/
+
+.text_phrase p {
+    text-align: center;
+    font-size: 31px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 3.4rem;
+    display: block;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list{
+    width: 600px;
+}
+.second_phrase, .third_phrase, .fourth_phrase, .six_phrase, .seven_phrase, .eight_phrase {
+    margin-top: 20px;
+    line-height: 4rem;
+}
+.fourth_phrase {
+     margin-left: 2px;
+    margin-right: 2px;
+}

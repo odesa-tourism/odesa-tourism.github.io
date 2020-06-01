@@ -1,0 +1,1230 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: white;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px repeat(10, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas: ". logo . . . . menu_header menu_header menu_header menu_header menu_header menu_header "
+        ". table temperature local_time ."
+        ". . . . name name name name name .. ";
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper:after {
+    background-color: rgb(0, 0, 0, .4);
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "";
+}
+
+.table {
+    background-color: ;
+    grid-column: 2;
+    grid-row: 5;
+    grid-area: . table temperature local_time .;
+    z-index: 2;
+}
+
+.name {
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row: 6;
+    grid-area: . . . . name name name name name ..;
+    justify-self: center;
+    z-index: 2;
+}
+
+/*video*/
+.video {
+    position: relative;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    z-index: 1;
+
+}
+
+.video_media {
+    position: absolute;
+    width: 100%;
+    height: auto;
+
+
+}
+
+/*name odesa*/
+
+.header_title p {
+    font-size: 120px;
+    color: white;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+.header_line p {
+    padding-left: 33rem;
+    letter-spacing: 1.4px;
+
+}
+
+hr.line {
+    width: 210px;
+    border: 1px solid #ff941f;
+    margin-right: 160px;
+}
+
+/*menu*/
+
+header {
+    background-color: transparent;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row: 2;
+}
+
+header .logo img {
+    max-width: 160px;
+    margin-right: 52rem;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:  #0071BC;
+    transform: translateY(-200%);
+    transition: 0.2s;
+    z-index: 111;
+}
+
+body.scroll header.sticky {
+    transform: translateY(0);
+}
+
+.nav-wrapper {
+    z-index: 2;
+    max-width: 1600px;
+    background: transparent;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+nav.nav-wrapper ul li {
+    display: inline-block;
+    padding: 0 17px;
+    margin-bottom: 0;
+    font-size: 28px;
+
+}
+
+nav.nav-wrapper ul li a {
+    font-size: 19px;
+    line-height: 2px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+nav.nav-wrapper ul li a:hover {
+    border-bottom: 1px solid #ff941f;
+}
+
+
+
+
+/*weather*/
+
+
+.table {
+    border: 1px solid #ff941f;
+    top: 50px;
+    right: 50px;
+    width: 200px;
+    color: #fff;
+}
+
+.table .weather_table {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #ff941f;
+    text-align: center;
+}
+
+.weather-header {
+    padding: 9px;
+    letter-spacing: 1.2px;
+}
+
+.temp-num {
+    border-right: 1px solid #ff941f;
+    border-bottom-width: 2px;
+    line-height: 1em;
+    padding: 14px 0;
+    color: #ffffff;
+}
+
+.table .temp-num,
+.table .local_time {
+    width: 50%;
+    float: left;
+    font-size: 21px;
+    padding: 11px;
+
+
+}
+
+.local_time {
+    line-height: 1em;
+    padding: 14px 0;
+}
+
+/*second section about odesa*/
+
+.wrapper_1 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px repeat(10, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas: "greetings greetings ";
+    height: 100vh;
+    background-color: white;
+}
+
+.greetings {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row: 6;
+    grid-area: greetings greetings;
+
+}
+
+.header_about {
+    color: #248cd1;
+    font-size: 57px;
+    font-style: medium;
+    font-weight: 500;
+    text-align: center;
+}
+
+hr.line_1 {
+    border: 1px solid #ff941f;
+    width: 210px;
+}
+
+.text_about p {
+    color: #082970;
+    text-align: center;
+    font-size: 18px;
+    font-style: medium;
+    font-weight: 590;
+    line-height: 2rem;
+    letter-spacing: 0.7px;
+
+}
+
+.icon img {
+    margin-left: 230px;
+    width: 20%;
+
+}
+
+html {
+   scroll-behavior: smooth;
+
+}
+
+/*media*/
+/*стрелочка*/
+.arrow-7 {
+    margin: 30px;
+    z-index: 2;
+    display: grid;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 9;
+    grid-row-end: 11;
+    justify-self: center;
+
+}
+
+.arrow-7 span {
+
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    transform: rotate(45deg);
+    margin: -8px;
+    animation: arrow-7 2s infinite;
+}
+
+.arrow-7 span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow-7 span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes arrow-7 {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .video{
+      display: none;
+    }
+    #reasons{
+        display: none;
+    }
+    #phrases{
+        display: none;
+    }
+    .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px repeat(10, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas: ". logo . . . . menu_header menu_header menu_header menu_header menu_header menu_header "
+        ". table temperature local_time ."
+        ". . . . name name name name name .. ";
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper:after {
+    background-color: rgb(0, 0, 0, .4);
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "";
+}
+    /*video*/
+
+
+/*name odesa*/
+
+     .name{
+        grid-row: 6;
+        grid-column-start: 3;
+        grid-column-end: 12;
+        align-self: center;
+        justify-self: center;
+       
+       
+    }
+.header_title p {
+    font-size: 120px;
+    color: white;
+    margin-bottom: 0px;
+    text-align: justify;
+    margin-right: 10rem;
+}
+
+.header_line p {
+    padding-left: 30rem;
+    letter-spacing: 1.4px;
+
+}
+
+hr.line {
+    width: 240px;
+    border: 1px solid #ff941f;
+    margin-right: 30px;
+}
+
+/*menu*/
+
+header {
+    background-color: transparent;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row: 2;
+}
+
+header .logo img {
+    max-width: 170px;
+    margin-right: 19rem;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:  #0071BC;
+    transform: translateY(-200%);
+    transition: 0.2s;
+    z-index: 111;
+}
+
+body.scroll header.sticky {
+    transform: translateY(0);
+}
+
+.nav-wrapper {
+    z-index: 2;
+    max-width: 1900px;
+    background: transparent;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+nav.nav-wrapper ul li {
+    display: inline-block;
+    padding: 0 12px;
+    margin-bottom: 0;
+   
+    font-size: 28px;
+
+}
+
+nav.nav-wrapper ul li a {
+    font-size: 19px;
+    line-height: 2px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+nav.nav-wrapper ul li a:hover {
+    border-bottom: 1px solid #ff941f;
+}
+
+.table {
+    border: 1px solid #ff941f;
+    top: 50px;
+    right: 50px;
+    width: 200px;
+    color: #fff;
+}
+
+.table .weather_table {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #ff941f;
+    text-align: center;
+}
+
+.weather-header {
+    padding: 9px;
+    letter-spacing: 1.2px;
+}
+
+.temp-num {
+    border-right: 1px solid #ff941f;
+    border-bottom-width: 2px;
+    line-height: 1em;
+    padding: 14px 0;
+    color: #ffffff;
+}
+
+.table .temp-num,
+.table .local_time {
+    width: 50%;
+    float: left;
+    font-size: 21px;
+    padding: 11px;
+
+
+}
+
+.local_time {
+    line-height: 1em;
+    padding: 14px 0;
+}
+
+    .header_about {
+        font-size: 60px;
+    }
+    hr.line_1 {
+        width: 250px;
+    }
+    .text_about p{
+        font-size: 22px;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+    .icon img{
+        margin-left: 32rem;
+        width: 12%;
+    }
+    .greetings{
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row: 6;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px) {
+    
+  .video{
+      display: grid;
+       z-index: 1; 
+    }
+    .video_media {
+    position: absolute;
+    width: 100%;
+    height: auto;
+
+
+}
+      #reasons{
+        display: none;
+    }
+    #phrases{
+        display: none;
+    }
+    
+    .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px repeat(10, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas: ". logo . . . . menu_header menu_header menu_header menu_header menu_header menu_header "
+        ". table temperature local_time ."
+        ". . . . name name name name name .. ";
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper:after {
+    background-color: rgb(0, 0, 0, .4);
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "";
+}
+    /*video*/
+.video {
+    position: relative;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    z-index: 1;
+
+}
+
+.video_media {
+    position: absolute;
+    width: 100%;
+    height: auto;
+
+
+}
+
+/*name odesa*/
+
+     .name{
+        grid-row: 6;
+        grid-column-start: 3;
+        grid-column-end: 12;
+        align-self: center;
+        justify-self: center;
+       
+       
+    }
+.header_title p {
+    font-size: 120px;
+    color: white;
+    margin-bottom: 0px;
+    text-align: justify;
+    margin-right: 10rem;
+}
+
+.header_line p {
+    padding-left: 30rem;
+    letter-spacing: 1.4px;
+
+}
+
+hr.line {
+    width: 240px;
+    border: 1px solid #ff941f;
+    margin-right: 30px;
+}
+
+/*menu*/
+
+header {
+    background-color: transparent;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row: 2;
+}
+
+header .logo img {
+    max-width: 170px;
+    margin-right: 19rem;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:  #0071BC;
+    transform: translateY(-200%);
+    transition: 0.2s;
+    z-index: 111;
+}
+
+body.scroll header.sticky {
+    transform: translateY(0);
+}
+
+.nav-wrapper {
+    z-index: 2;
+    max-width: 1900px;
+    background: transparent;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+nav.nav-wrapper ul li {
+    display: inline-block;
+    padding: 0 12px;
+    margin-bottom: 0;
+   
+    font-size: 28px;
+
+}
+
+nav.nav-wrapper ul li a {
+    font-size: 19px;
+    line-height: 2px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+nav.nav-wrapper ul li a:hover {
+    border-bottom: 1px solid #ff941f;
+}
+
+
+
+
+/*weather*/
+
+
+.table {
+    border: 1px solid #ff941f;
+    top: 50px;
+    right: 50px;
+    width: 200px;
+    color: #fff;
+}
+
+.table .weather_table {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #ff941f;
+    text-align: center;
+}
+
+.weather-header {
+    padding: 9px;
+    letter-spacing: 1.2px;
+}
+
+.temp-num {
+    border-right: 1px solid #ff941f;
+    border-bottom-width: 2px;
+    line-height: 1em;
+    padding: 14px 0;
+    color: #ffffff;
+}
+
+.table .temp-num,
+.table .local_time {
+    width: 50%;
+    float: left;
+    font-size: 21px;
+    padding: 11px;
+
+
+}
+
+.local_time {
+    line-height: 1em;
+    padding: 14px 0;
+}
+
+    .header_about {
+        font-size: 60px;
+    }
+    hr.line_1 {
+        width: 250px;
+    }
+    .text_about p{
+        font-size: 22px;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+    .icon img{
+        margin-left: 32rem;
+        width: 12%;
+    }
+    .greetings{
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row: 6;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    video{
+        display: none;
+    }
+   .wrapper {
+        display: grid;
+       grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        
+    }
+   .wrapper:after{
+        display: grid;
+        background-color: skyblue;
+         grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+     .logo {
+        max-width: 100px;
+        
+    }
+    .name{
+        grid-row: 3;
+        grid-column-start: 2;
+        grid-column-end: 9;
+        align-self: center;
+        justify-self: center;
+       
+       
+    }
+    .arrow-7{
+        display: none;
+        
+    }
+    .header_title p{
+        
+        font-size: 50px;
+     
+      
+    }
+    hr.line{
+        width: 100px;
+        margin-left: orem;
+    }
+    
+    .header_line p{
+        font-size: 9px;
+        padding-left: 1rem;
+    }
+    .table{
+        grid-row: 2;
+        grid-column: 2;
+        display: none;
+    }
+    header{
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 9;
+        background-color: transparent;
+        
+    }
+    .nav-wrapper{
+        font-size: 27px;
+        max-width: 1000px;
+        
+    }
+    nav.nav-wrapper ul li a{
+        font-size: 14px;
+    }
+    nav.nav-wrapper ul li{
+     padding: 0 px;
+    }
+    .table {
+    border: 1px solid #ff941f;
+    top: 3px;
+    right: 10px;
+    width: 100px;
+    color: #fff;
+    
+}
+
+.table .weather_table {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #ff941f;
+    text-align: center;
+}
+    hr.line{
+        width: 290px;
+        margin-left: 0rem;
+    }
+    
+.weather-header {
+    padding: 10px;
+    letter-spacing: 1.2px;
+    
+}
+
+.temp-num {
+    border-right: 1px solid #ff941f;
+    border-bottom-width: 2px;
+    line-height: 1em;
+    padding: 24px 0;
+    color: #ffffff;
+    
+}
+
+.table .temp-num,
+.table .local_time {
+    width: 50%;
+    float: left;
+    padding: 11px;
+}
+    
+ 
+    .header_about {
+        font-size: 30px;
+    }
+    hr.line_1 {
+        width: 140px;
+    }
+    .text_about p{
+        font-size: 12px;
+        line-height: 1.2rem;
+        text-align: center;
+    }
+    .icon img{
+       margin-left: 20rem;
+        width: 10%;
+    }
+    .greetings{
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row: 4;
+    }
+}
+
+
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+     .video{
+        display: none;
+    }
+    .wrapper {
+        display: grid;
+       grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        
+    }
+   .wrapper:after{
+        display: grid;
+        background-color: skyblue;
+         grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+     .logo {
+        max-width: 100px;
+        
+    }
+    .name{
+        grid-row: 3;
+        grid-column-start: 2;
+        grid-column-end: 9;
+        align-self: center;
+        justify-self: center;
+       
+       
+    }
+    .arrow-7{
+        display: grid;
+        grid-column: 3;
+        grid-row: 5;
+    }
+    .header_title p{
+        
+        font-size: 80px;
+     
+        padding-left: 1rem;
+      
+    }
+    .header_line p{
+        font-size: 13px;
+        padding-left: 1rem;
+    }
+    .table{
+        grid-row: 2;
+        grid-column: 2;
+        display: none;
+    }
+    header{
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 9;
+        background-color: transparent;
+        
+    }
+    .nav-wrapper{
+        font-size: 29px;
+        max-width: 1000px;
+        
+    }
+    nav.nav-wrapper ul li a{
+        font-size: 14px;
+    }
+    nav.nav-wrapper ul li{
+     padding: 0 px;
+    }
+    .table {
+    border: 1px solid #ff941f;
+    top: 3px;
+    right: 10px;
+    width: 100px;
+    color: #fff;
+    
+}
+
+.table .weather_table {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #ff941f;
+    text-align: center;
+}
+    hr.line{
+        width: 290px;
+        margin-left: 0rem;
+    }
+    
+.weather-header {
+    padding: 10px;
+    letter-spacing: 1.2px;
+    
+}
+
+.temp-num {
+    border-right: 1px solid #ff941f;
+    border-bottom-width: 2px;
+    line-height: 1em;
+    padding: 24px 0;
+    color: #ffffff;
+    
+}
+
+.table .temp-num,
+.table .local_time {
+    width: 50%;
+    float: left;
+    padding: 11px;
+}
+    
+ 
+    .header_about {
+        font-size: 50px;
+    }
+    hr.line_1 {
+        width: 190px;
+    }
+    .text_about p{
+        font-size: 19px;
+        line-height: 1.7rem;
+        text-align: center;
+    }
+    .icon img{
+        
+        width: 20%;
+    }
+    .greetings{
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row: 6;
+    }
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .wrapper {
+        display: grid;
+       grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        
+    }
+    .wrapper:after{
+        display: grid;
+        background-color: skyblue;
+         grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .video{
+        display: none;
+    }
+    .logo {
+        max-width: 80px;
+        
+    }
+    
+ .arrow-7{
+        display: none;
+        
+    }
+    .name{
+        grid-row: 3;
+        grid-column: 2;
+        padding-left: 3rem;
+       
+    }
+    .header_title p{
+        grid-row: 2/-1;
+        font-size: 59px;
+        padding-left: 1rem;
+      
+    }
+    .header_line p{
+        font-size: 8px;
+        padding-left: 2rem;
+    }
+    .table{
+        grid-row: 2;
+        grid-column: 2;
+        display: none;
+    }
+    header{
+        grid-row: 1;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        background-color: transparent;
+        
+    }
+    .nav-wrapper{
+        font-size: 20px;
+        max-width: 500px;
+        
+    }
+    nav.nav-wrapper ul li a{
+        font-size: 14px;
+    }
+    nav.nav-wrapper ul li{
+     padding: 0 px;
+    }
+    .table {
+    border: 1px solid #ff941f;
+    top: 3px;
+    right: 10px;
+    width: 100px;
+    color: #fff;
+    
+}
+
+.table .weather_table {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #ff941f;
+    text-align: center;
+}
+    hr.line{
+        width: 220px;
+        margin-left: 2rem;
+    }
+    
+.weather-header {
+    padding: 10px;
+    letter-spacing: 1.2px;
+    
+}
+
+.temp-num {
+    border-right: 1px solid #ff941f;
+    border-bottom-width: 2px;
+    line-height: 1em;
+    padding: 24px 0;
+    color: #ffffff;
+    
+}
+
+.table .temp-num,
+.table .local_time {
+    width: 50%;
+    float: left;
+    padding: 11px;
+}
+    
+    .weather-temp{
+        font-size: 2px;
+    }
+
+     span#temp-text{
+         
+        font-size: 2px;
+    }
+    span#time {
+        font-size: 2rem;
+    }
+    .header_about {
+        font-size: 30px;
+    }
+    hr.line_1 {
+        width: 140px;
+    }
+    .text_about p{
+        font-size: 16px;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+    .icon img{
+        margin-left: 10rem;
+        width: 20%;
+    }
+    .greetings{
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row: 7;
+    }
+}
+
