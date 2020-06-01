@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Odesa</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet prefetch' href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <link rel="stylesheet" href="css/first.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sightseeings.css">
+    <link rel="stylesheet" href="css/reasons.css">
+    <link rel="stylesheet" href="css/hotel.css">
+    <link rel="stylesheet" href="css/phrases.css">
+    <link rel="stylesheet" href="css/last.css">
+    <link rel="stylesheet" href="slider_css/slick-slider.css" />
+    <link rel="stylesheet" href="slider_css/slick.css" />
+    <link rel="stylesheet" href="slider_css/slick-theme.css" />
+
+ <style>
+     .colortext_last {
+            color: lightyellow;
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .colortext {
+            color: #ff941f;
+            font-size: 55px;
+            font-weight: 1000;
+            letter-spacing: 2px;
+            
+        }
+             img {
+            padding-left: 1px;
+            width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            margin-bottom: .3em;
+            color: #0071BC;
+            text-align: center;
+            letter-spacing: 0.7px;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            margin-bottom: .2em;
+            text-align: center;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+
+        }
+
+
+        /* hover */
+        .location-listing {
+            position: relative;
+        }
+
+        .location-image {
+            line-height: 0;
+            overflow: hidden;
+            grid-column-start: 1;
+        }
+
+        .location-image img {
+            filter: blur(0px);
+            transition: filter 0.3s ease-in;
+            transform: scale(1.1);
+        }
+
+        .location-title {
+            font-size: 2em;
+            font-weight: ;
+            text-decoration: none;
+            z-index: 1;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity .5s;
+            background: rgba(90, 0, 10, 0.4);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .location-listing:hover .location-title {
+            opacity: 1;
+        }
+
+        .location-listing:hover .location-image img {
+            filter: blur(2px);
+        }
+
+        i  {
+            z-index: 2;
+            color: white;
+            font-size: 2rem;
+            padding-right: 7px;
+
+        }
+
+        /* media*/
+        @media (hover: none) {
+            .location-title {
+                opacity: 1;
+            }
+
+            .location-image img {
+                filter: blur(2px);
+            }
+        }
+
+     
+     
+     
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="video">
+            <video class="vide_media" src="video_odesa/video.mp4" autoplay muted loop></video>
+        </div>
+  <header>
+          <nav class="nav-wrapper">
+            <div class="logo">
+                <a href="index.html" data-type="page-transition"><img src="photo/logo2.png" class="logo"></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#about">Про Одесу</a></li>
+                <li><a href="#explore">Топ Місць</a> </li>
+                <li><a href="#reasons">5 причин</a> </li>
+                <li><a href="#hotels">Топ Готелів</a> </li>
+                <li><a href="#phrases">Одеські фрази</a> </li>
+            </ul>
+          </nav>
+          
+        </header>
+        <div class="table">
+           <div class="weather_table">
+            <div class="weather-header">
+                МІСЦЕВИЙ ЧАС
+            </div>
+
+            <div id="weather-temp" class="temp-num"><span id="temp-text" style="font-family:'Montserrat', sans-serif;font-size:22px;color:#ffffff !important;"></span> <span id="tempMode">C&deg</span> </div>
+
+            <div id="weather-time" class="local_time"><strong><span id="time" style="color:#ffffff;font-family: 'Montserrat', sans-serif;font-size:22px;line-height: 2rem !important;"></span></strong></div>
+        </div>
+</div>
+        <div class="name">
+            <div class="header_title">
+                <p>ОДЕСА</p>
+                <hr class="line" />
+            </div>
+
+
+            <div class="header_line">
+                <p>НЕОФІЦІЙНИЙ ТУРИСТИЧНИЙ САЙТ</p>
+            </div>
+        </div>
+        <div class="arrow-7">
+        
+        
+    <span> </span>
+    <span></span>
+    <span></span>
+  
+</div>
+
+    </div>
+
+
+
+
+    <section id="about">
+        <div class="wrapper_1" data-scroll>
+            <div class="greetings">
+                <div class="icon">
+                    <img data-src="/themes/tns/images/boat_loop-animation.gif" class=" ls-is-cached lazyloaded" src="photo/boat_loop-animation.gif"></div>
+                <h1 class="header_about">ВІТАЮ В ОДЕСІ!
+                    <hr class="line_1" />
+                </h1>
+                <div class="text_about">
+                    <p>Одеса — місто на чорноморському узбережжі України, найбільший морський порт у країні, місто обласного значення, центр Одеської області.<br /> <br />
+
+                        Одеса — ​це не лише найбільший в Україні морський порт, а й важливий історичний, культурний, промисловий та науковий центр країни. А м’який клімат, чудові піщані пляжі, безліч фестивалів
+                        і культурних заходів створили неповторний образ Одеси, яку справедливо називають південною перлиною біля Чорного моря</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="explore" class="swiper-container">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide active">
+
+                <div class="grid_sight">
+                    <div class="sight">
+                        <div class="sight_item">
+                            <div class="photo_sight">
+                                <img src="sightseeings/opera.jpg">
+                            </div>
+                            <div class="text_sight">
+                                <h2 class="text_name_sight">ОПЕРНИЙ ТЕАТР</h2>
+                                <div class="text_text">
+                                    <p>Якщо ви приїхали до Одеси, не можна обійти увагою оперу — ​один із символів міста. Обов’язково знайдіть час, щоб сходити на виставу. Інтер’єр і оздоблення театру просто надзвичайні. Будівля схожа на палац з персонажами з казок. Кожен спектакль подарує вам відчуття чогось чарівного, трепетного, душевного. Навіть якщо до цього ви не були шанувальником опери і балету, повірте, все зміниться!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide active">
+
+                <div class="grid_sight">
+                    <div class="sight">
+                        <div class="sight_item">
+                            <div class="photo_sight">
+                                <img src="sightseeings/sea_port.jpg">
+                            </div>
+                            <div class="text_sight">
+                                <h2 class="text_name_sight">МОРСЬКИЙ ВОКЗАЛ</h2>
+                                <div class="text_text">
+                                    <p>Одеський морський торговельний порт — найбільший український морський порт і один із найбільших портів в басейні Чорного моря. Порт – це перлина і символ міста, що був побудований одночасно з містом. Одеський морський вокзал був побудований на Новому молу в 1968 році за проектом архітекторів В. Головіна та В. Кремлякова. Після значних змін будівля Одеського морського вокзалу сьогодні являє собою дивну картину сучасного мегаполісу, переплетення скла та металу, а вся територія є своєрідною набережною, яка користується величезною популярністю у одеситів і гостей міста, особливо в літній сезон.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide active">
+
+                <div class="grid_sight">
+                    <div class="sight">
+                        <div class="sight_item">
+                            <div class="photo_sight">
+                                <img src="sightseeings/passage.jpg">
+                            </div>
+                            <div class="text_sight">
+                                <h2 class="text_name_sight">ПАСАЖ</h2>
+                                <div class="text_text">
+                                    <p>Одеський Пасаж, побудований у 1898 – 1899 роках. Його архітектура неповторна і унікальна,
+                                        у якій чудово поєднується бароко,класика і модерн. Родзинкою споруди є скляний атріум. Комплекс більше подібний на музей ніж на торговий центр. Внутрішній 0двір будівлі оздоблений чисельними скульптурами. Усередині знаходиться ціла вулиця
+                                        з рядами елітних магазинів, ресторації, офіси, а ще управління готелю «Пасаж»</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide active">
+
+                <div class="grid_sight">
+                    <div class="sight">
+                        <div class="sight_item">
+                            <div class="photo_sight">
+                                <img src="sightseeings/primorski.jpg">
+                            </div>
+                            <div class="text_sight">
+                                <h2 class="text_name_sight">ПРИМОРСЬКИЙ БУЛЬВАР</h2>
+                                <div class="text_text">
+                                    <p>Вулиця Приморський Бульвар – один з символів Одеси і чи не головна вулиця історичного центру. Бульвар починається від Думської площі і закінчується біля Тещиного мосту за Воронцовським палацом. Приморський Бульвар є одним з найкращих архітектурних ансамблів в стилі класицизму на території України. Незважаючи на нібито один стиль, кожна будівля на цій вулиці неповторна і варта уваги. Приморський бульвар це як музей під відкритим небом, з цікавою історією і неповторним шармом. По алеям бульвару гуляли М. Гоголь і В. Бєлінський, І. Айвазовський і Леся Українка.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide active">
+
+                <div class="grid_sight">
+                    <div class="sight">
+                        <div class="sight_item">
+                            <div class="photo_sight">
+                                <img src="sightseeings/arkadia.jpg">
+                            </div>
+                            <div class="text_sight">
+                                <h2 class="text_name_sight">АРКАДІЯ</h2>
+                                <div class="text_text">
+                                    <p>«Аркадія» є найпопулярнішою зоною відпочинку в Одесі. Це і однойменний пляж, і прекрасний парк. «Аркадія» розташована в Приморському районі міста і по праву вважається головним курортним районом Одеси. Сюди щорічно з'їжджаються десятки тисяч туристів не тільки з України, а й з Європи. Це місце вважається ще й найбільш «тусовочним», адже саме тут –велика кількість барів, кафе, ресторанів, нічних клубів, готелів і, звичайно, пляжів з усією необхідною інфраструктурою (басейни, дитячі майданчики).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </section>
+
+    /*reasons*/
+  <section id="reasons">
+            <div class="container">
+
+
+                <div class="photo_reasons">
+                    <img src="photo/background_reasons.png">
+                </div>
+                <div class="text_reasons">
+                    <p> 5 <br />
+                        &nbsp&nbspПРИЧИН ВІДВІДАТИ <span class="colortext">&nbspОДЕСУ</span></p>
+
+                </div>
+                <div class="text_information">
+                    <div class="first">
+                        <h1 class="main">ОДЕСЬКІ ДВОРИКИ</h1>
+                        <p>Дерибасівська, «Привоз», «Аркадія»...
+                            Звичайно, це дуже популярні місця
+                            в Одесі. Але де ж відчути той самий одеський колорит, про який так багато говорять, знімають фільми й пишуть книги? &nbsp <br />
+                            В одеських двориках! Тут, подалі від очей туристів, сховані справжні історичні скарби і витає <br /> дух старої Одеси. </p>
+                    </div>
+                    <div class="second">
+                        <h1 class="main">ОДЕСЬКІ КОТИ </h1>
+                        <p>Коти особливі. Вони самодостатні. Вони всюди. Вони бродять, де заманеться, заходять
+                            в будь-які будівлі, як до себе додому. Їх не проганяють. Їм кладуть корм і ставлять воду. Їх обережно обходять, якщо їх величність вліглося на дорозі. Вони пещені, вони - господарі міста набагато більше, ніж голуби або флегматичні одеські собаки. І, звичайно, одеські улюбленці не могли не стати персонажам
+                            і міських скульптур. Всього в Одесі їх понад 24. </p>
+                    </div>
+                    <div class="third">
+                        <h1 class="main">КРИМІНАЛЬНА ОДЕСА</h1>
+                        <p>Одеса-мама — королева кримінального світу, а її відомі діти — Сонька Золота Ручка, Мішка Япончик, Григорій Котовський, Джеймс Бонд, Остап Бендер. Всі ці історичні особистості, так чи інакше пов’язані з Одесою, стали головними героями книг і фільмів. Побачте, як на початку 20-х років
+                            в Одесі почало зароджуватися кримінальне життя, як бурхливо воно розвивалося, і які злочини були скоєні за цей період в легендарному місті гумористів. </p>
+                    </div>
+                    <div class="fourth">
+                        <h1 class="main">ОДЕСЬКІ КАТАКОМБИ</h1>
+                        <p>
+                            Практично під усім містом розташовуються знамениті Одеські катакомби. У XIX-XX століттях це були каменоломні, де добували головний будівельний матеріал старої Одеси – камінь ракушняк. Катакомби мають загальну довжину близько 3 тис. км, половина з них до цих пір не вивчена і там залишаються різні артефакти часів Другої світової війни і навіть, можливо, цінні речі контрабандистів. Відвідувати катакомби необхідно лише у складі екскурсії, тому що самостійно можна заблукати. </p>
+                    </div>
+                    <div class="fifth">
+                        <h1 class="main">ОДЕСЬКИЙ ГУМОР</h1>
+                        <p>Одеса в пам’яті вже декількох поколінь вважається столицею Гумору. Строкатий за походженням одеський народ ввібрав в себе кращі риси представників багатьох національностей, які<br /> з перших днів народження Одеси тут <br />облаштувалися і стали облаштовувати Одесу.</p>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+    <section id="hotels" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+
+                <div class="hotel_grid active">
+                    <div class="hotel">
+                        <div class="hotel__item">
+                            <div class="photo_hotel">
+                                <img src="hotel/hotel1.jpg">
+                            </div>
+                            <div class="hotel_text">
+                                <h2 class="hotel_h">Готель “Maristella Marine Residence”</h2>
+
+                                <div class="description">
+                                    <p>Готель "Maristella Marine Residence" розташований у фешенебельному районі Одеси - на 10-й станції Великого Фонтану біля самої кромки моря, ближче всіх інших готелів міста. Марістела - «Морська Зірка», «Зірка морів» - ідеальне назву для готелю, чи не так? Здалеку вона дійсно нагадує корабель, пришвартований до причалу. Білосніжно-блакитна зовні, готель біля моря стоїть під вітрилом в очікуванні приємної подорожі. </p>
+                                    <p>Зручна інфраструктура готелю (Відстань до Міжнародного аеропорту - 6 км. До центру Одеси - 8 км. До залізничного вокзалу - 7 км), два ресторани (європейська і одеська кухня), можливість проводити банкети в готелі, власна тераса з видом на море, а також особливе ставлення до кожного гостя - робить наш готель особливою і унікальною.</p>
+                                    <p><a href="https://maristella.com.ua/" target="_blank">https://maristella.com.ua/</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div class="hotel_grid active">
+                    <div class="hotel">
+                        <div class="hotel__item">
+                            <div class="photo_hotel">
+                                <img src="hotel/hotel2.jpg">
+                            </div>
+                            <div class="hotel_text">
+                                <h2 class="hotel_h">NEMO Hotel Resort & SPA</h2>
+
+                                <div class="description">
+                                    <p> Це найближчий готель біля моря. Вишуканий інтер’єр, деталі продумані до дрібниць, панорамний вид на морське узбережжя, набережну та центральний парк. У будь-який час року для Вас працює розкішний банний комплекс з різноманітними парними і басейнами з морською водою, а також Wellness SPA, в якому Ви можете насолодитися вишуканими СПА-процедурами та авторськими масажами. На території готелю: 6 басейнів з підігрітою морською водою, 7 гідромасажних джакузі, а також 35 гідромасажних джакузі у номерах. Унікальний басейн у формі дельфіна працює цілий рік. В зимовий період у Вашому розпорядженні критий плавальний басейн.</p>
+                                    <p><a href="https://odessa.nemohotels.com/ua/" target="_blank">https://odessa.nemohotels.com/ua/</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div class="hotel_grid active">
+                    <div class="hotel">
+                        <div class="hotel__item">
+                            <div class="photo_hotel">
+                                <img src="hotel/hotel3.jpg">
+                            </div>
+                            <div class="hotel_text">
+                                <h2 class="hotel_h">Готель PANORAMA DE LUXE</h2>
+
+                                <div class="description">
+                                    <p>Panorama De Luxe в Одесі на березі моря – дизайнерському готелі із дивовижним панорамним видом на Черне море. Назву в повній мірі виправдано морським пейзажем, який відкривається з обох терас та більшій частині номерів. Розташування у парковій зоні біля моря забезпечує не лише на мальовничий вид, але й найчистіше повітря. Дорогий та функціональний дизайн холу, залів та номерів, та висококласне обслуговування відповідає класу готелю та заявленим 5-ти зіркам.
+
+                                        Готель Panorama De Luxe – воістину унікальне місце в Одесі, де можна відпочити із родиною, відсвяткувати важливий день із друзями та близькими, провести бізнес-захід. Окрім ультра-комфортних просторих номерів, у розпорядженні гостей:</p>
+                                    <p><a href="https://panoramadeluxe.com/ua/" target="_blank">https://panoramadeluxe.com/ua/</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div class="hotel_grid active">
+                    <div class="hotel">
+                        <div class="hotel__item">
+                            <div class="photo_hotel">
+                                <img src="hotel/hotel4.jpg">
+                            </div>
+                            <div class="hotel_text">
+                                <h2 class="hotel_h">Відпочинковий комплекс
+                                    Elki-Palki</h2>
+
+                                <div class="description">
+                                    <p>У будь-який час року, будь то зима або літо, сніг, сонце, прохолода і спеку, атмосфера комплексу зберігає свою привабливість і магнетизм, всім свом виглядом показуючи, що в перебігу року спокій цього соснового куточка не порушить ніяка негода !
+
+                                        Комплекс відпочинку Elki-Palki надає послугу по проживанню в дерев'яних котеджах, а його розташування досить зручно по відношенню до загальної інфраструктури житлового масиву. </p>
+                                    <p>
+                                        Для проживаючих в комплексі відпочинку Elki-Palki користування вуличним басейном, джакузі і береговим комплексом Схід входить у вартість проживання і дійсно тільки в літній період (з 01 червня по 31 серпня). У зимовий період берегової комплекс не працює а вуличним басейном і джакузі дозволено користуватися відвідувачам банного комплексу.</p>
+                                    <p><a href="http://sovinyon-ep.com.ua/" target="_blank">http://sovinyon-ep.com.ua/</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div class="hotel_grid active">
+                    <div class="hotel">
+                        <div class="hotel__item">
+                            <div class="photo_hotel">
+                                <img src="hotel/hotel5.jpg">
+                            </div>
+                            <div class="hotel_text">
+                                <h2 class="hotel_h">Atlantic Garden Resort Hotel</h2>
+
+                                <div class="description">
+                                    <p> Готель відповідає найвищим європейським стандартам. Наша мета дарувати як найбільше задоволення і комфорту, враховуючи усі сучасні тенденції. Інтер’єр здивує Вас ексклюзивним дизайном, ресторан – неперевершеною кухнею, номера – затишком і комфортом, великі сонячні тераси – розкішною панорамою, а Fitness & SPA – бадьорістю і легкістю.</p>
+                                    <p>Єдиний в Одесі готель, який поєднує 121 дизайнерський номер, конференц-зали, SPA, ресторани, власний піщаний пляж та клуби.
+
+                                        Банкетний зал, лоббі-бар та ресторан тераса готові здивувати стравами європейської, болгарської та авторської кухонь 24 години на добу, кожний день. До послуг гостей 4 конференц-зали та кімната переговорів площами від 30 кв. м до 560 кв. м та можливістю розміщення від 25 до 350 осіб.</p>
+                                    <p><a href="https://atlantic-hotel.com.ua/?lang=uk" target="_blank">https://atlantic-hotel.com.ua/?lang=uk/</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </section>
+    /*phrases*/
+
+ <section id="phrases">
+            <div class="section" id="phrase">
+                <div class="grid ">
+
+                    <div class="photo_phrases">
+                        <img src="photo/phrases.png">
+                    </div>
+                    <div class="text_phrases">
+                        <h1 class="main_phrase">Одеські фрази</h1>
+                        <p>Незвичайні одеські фрази давно стали крилатими. Одесити часто самі не помічають, як їх вимовляють,а ось для вуха туриста фраза звучить неправильно.
+                            З першої прочитаної фрази внутрішній голос починає говорити з єврейською вимовою.</p>
+                    </div>
+
+                    <div class="text_phrase">
+                        <div class="first_phrase">
+                            <p>Щаc я зроблю вам скандал,
+                                і буде вам весело ...</p>
+                        </div>
+                        <div class="second_phrase">
+                            <p>Чому ні , коли так?</p>
+                        </div>
+                        <div class="third_phrase">
+                            <p>Ні, це таки не фонтан ...</p>
+                        </div>
+                        <div class="fourth_phrase">
+                            <p>Ви шо, з мізками посварилися?</p>
+                        </div>
+                        <div class="fifth_phrase">
+                            <p>Посміхайтесь, завтра буде
+                                <br /> ше гірше</p>
+                        </div>
+                        <div class="six_phrase">
+                            <p>Я дико перепрошую ....</p>
+                        </div>
+                        <div class="seven_phrase">
+
+                            <p>Фіма, не розчісуй мені нерви!</p>
+                        </div>
+                        <div class="eight_phrase">
+
+                            <p>Не крутіть мені мої фаберже!</p>
+                        </div>
+                        <div class="eight_phrase">
+
+                            <p>Я маю вам дещо сказати ...</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+    <div class="child-page-listing">
+
+        <h2 class="tourism">#odessamama</h2>
+        <h3> Поділіться своїми фотографіями подорожей з нами, хештегуючи свої зображення за допомогою </h3>
+
+        <div class="grid-container">
+
+            <article id="3685" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/chemoil/" target="_blank">
+                    <i class="fab fa-instagram"></i> chemoil </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/1.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3688" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/soulinthewaves/" target="_blank">
+                    <i class="fab fa-instagram"></i> soulinthewaves </a>
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/2.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3691" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/tani.goncharova/" target="_blank">
+                    <i class="fab fa-instagram"></i> tani.goncharova
+
+                </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="310" height="172" src="instagram/12.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3694" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/julia_peshinskaya/" target="_blank">
+                    <i class="fab fa-instagram"></i> julia_peshinskaya </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/18.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3697" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/kristal_foto/" target="_blank">
+                    <i class="fab fa-instagram"></i> kristal_foto </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/6.jpg" alt="odesa"> </a>
+
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/samovarovruslan/" target="_blank">
+                    <i class="fab fa-instagram"></i> samovarovruslan </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/7.jpg" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/kirya_world/" target="_blank">
+                    <i class="fab fa-instagram"></i> kirya_world </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/22.jfif" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/vallerinova/" target="_blank">
+                    <i class="fab fa-instagram"></i> vallerinova
+
+                </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/10.jpg" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/sergey.yevich/" target="_blank">
+                    <i class="fab fa-instagram"></i> sergey.yevich
+
+                </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/11.jpg" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+
+            <article id="3700" class="location-listing">
+
+                <a class="location-title" href="https://www.instagram.com/mikhail_reva/" target="_blank">
+                    <i class="fab fa-instagram"></i> mikhail_reva </a>
+
+                <div class="location-image">
+                    <a href="#">
+                        <img width="300" height="169" src="instagram/9.jpg" alt="odesa">
+                    </a>
+                </div>
+
+            </article>
+        </div>
+
+
+    </div>
+
+
+
+    */last*/
+
+    <div class="last_grid ">
+        <div class="last">
+            <div class="last_item">
+                <div class="photo_last">
+                    <img src="sightseeings/last.jpg">
+                </div>
+
+                <div class="text_last">
+                    <h2 class="text_title_last">ЕКСКУРСІЇ В ОДЕСІ</h2>
+                    <div class="text_text_last">
+                        <p class="last_last">
+                            "Тудой - Сюдой" &nbsp &nbsp &nbsp
+                            <a href="https://tudoy-sudoy.od.ua/" target="_blank">https://tudoy-sudoy.od.ua//</a><br />
+                            <br /> "Экскурсии в Одессе" &nbsp <a href="https://excurs.od.ua/ua/obzor" target="_blank">https://excurs.od.ua/ua/obzor</a><br />
+                            <br />"LoveOdessa" &nbsp &nbsp &nbsp &nbsp <a href="https://love-odessa.od.ua/uk/" target="_blank">https://love-odessa.od.ua/uk/</a><br />
+                            <br /> "Одесса - Мама" &nbsp &nbsp <a href="https://ekskursii.odessa.ua/" target="_blank">https://ekskursii.odessa.ua/</a><br />
+                            <br /><br /><br /><span class="colortext_last">Туристичний інформаційний центр міста Одеси</span><br />
+                            <br /><a href="https://www.tic.in.ua/?lang=uk" target="_blank">https://www.tic.in.ua/?lang=uk</a>
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script>
+        //необходимые глобальные переменные для кеширования селектора.
+        var $tempMode = $("#tempMode");
+        var $tempText = $("#temp-text");
+
+        //$(document).ready(function() {
+
+
+        // эта функция берет температуру из обработчика данных и отображает температуру в соответствии с правильной единицей измерения температуры, а также отображает температуру теплой или холодной.
+        function formatTemperature(kelvin) {
+
+
+            var clicked = false;
+            var fahr = ((kelvin * 9 / 5) - 459.67).toFixed(0);
+            var cels = (kelvin - 273.15).toFixed(1);
+            //инициация индикации температуры
+            $tempText.html(cels);
+
+            var firstClick = false;
+            //щелкните обработчик, чтобы обновить единицу измерения температуры.
+            $tempMode.off("click").on("click", function() {
+                firstClick = true;
+                console.log(clicked);
+                clicked === false ? clicked = true : clicked = false;
+                clicked === true ? $tempMode.html("F&deg") : $tempMode.html("C&deg");
+                if (clicked) {
+                    $tempText.html(fahr);
+
+                } else
+                    $tempText.html(cels);
+            });
+
+            if (cels > 24) {
+                $("#temp-text").css("color", "red");
+            } else if (cels < 18) {
+                $("#temp-text").css("color", "blue");
+            }
+        }
+        //обрабатывает данные ответа и форматирует их соответствующим образом, поскольку это асинхронный объект ответа, вся обработка и форматирование данных должны выполняться в этой функции.
+
+        function dataHandler(data) {
+            dataString = JSON.stringify(data);
+            console.log(data.main.temp);
+            formatTemperature(data.main.temp);
+            if (data.main.temp && data.sys) {
+
+
+
+            }
+        }
+
+        function getWeather(locdata) {
+            console.log("getWeather has been called.")
+            var lat = locdata.latitude;
+            var lon = locdata.longitude;
+
+            var apiURI = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=5b58aee62c41eb64fcab16edce2e5cc1";
+            //выводим данные IP
+            if (locdata) {
+                console.log("success");
+                $("#city-text").html(locdata.city);
+                $("#city-text2").html(locdata.country_name);
+                $("#city-text3").html(" Индекс: " + locdata.postal);
+                $("#city-text4").html(" Широта: " + locdata.latitude + " Долгота: " + locdata.longitude);
+                $("#city-text5").html(" IP: " + locdata.ip);
+                $("#city-text6").html(" Провайдер: " + locdata.org);
+            } else {
+                console.log("fail");
+            }
+
+            //делаем запрос на данные о погоде
+            console.log("success getWeather");
+            console.log(apiURI);
+            return $.ajax({
+                url: apiURI,
+                dataType: "jsonp",
+                type: "GET",
+                async: "true",
+            }).done(dataHandler);
+
+        }
+
+        var counter = 0;
+
+        function getLocation() {
+            console.log("Update# " + counter++);
+
+            //делаем запрос на локализацию устройства
+            return $.ajax({
+                url: "https://ipapi.co/jsonp/",
+                dataType: "jsonp",
+                type: "GET",
+                async: "true",
+            });
+        }
+
+
+        var updateInterval = setInterval(getLocation().done(getWeather), 300000);
+        //});
+
+        function showDateTime() {
+            var now = new Date();
+
+            time.textContent = correctTime(now);
+        }
+        showDateTime();
+        setInterval(showDateTime, 1000);
+
+        let stopwatchId, stopwatch_ms,
+            timerId, timer_ms;
+
+        // Общая функция корректного отображения времени. 
+        function correctTime(time) {
+            let h = time.getHours(),
+                m = time.getMinutes(),
+                s = time.getSeconds();
+            return `${(h < 10 ? "0" : "") + h}:${(m < 10 ? "0" : "") + m}`;
+        }
+        // В Opera отображение ведущего нуля часов глючит в Intl.
+        function correctTimeIntl(time) {
+            let format = Intl.DateTimeFormat("ru-ru", {
+                hour: "2-digit",
+                minute: "2-digit"
+            });
+            return format.format(time);
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            var $header = $('header');
+            var $sticky = $header.before($header.clone().addClass("sticky"));
+
+            $(window).on("scroll", function() {
+                var scrollFromTop = $(window).scrollTop();
+                $("body").toggleClass("scroll", (scrollFromTop > 350));
+            })
+        });
+    </script>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="js/javascript"></script>
+    <script src="js/slick.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $(".text_phrase").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                autoplayHoverPause: true,
+                autoplayTimeout: 4000
+
+            })
+        });
+    </script>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".text_information").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                autoplayHoverPause: true,
+                autoplayTimeout: 8000,
+                pause: 5000
+            })
+
+        });
+    </script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            /* docs https://swiperjs.com/api/ */
+            var swiper = new Swiper('#explore.swiper-container', {
+                /* docs https://swiperjs.com/api/#components */
+                direction: 'horizontal',
+                // loop: true,
+                speed: 600,
+                // parallax: true,
+                spaceBetween: 30,
+                hashNavigation: {
+                    watchState: true,
+                },
+                // mousewheel: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                /* docs https://swiperjs.com/api/#events */
+                on: {
+                    init: function() {},
+                    slideChange: function() {},
+                    transitionStart: function() {},
+                    transitionEnd: function() {},
+                    reachBeginning: function() {},
+                    reachEnd: function() {},
+                    resize: function() {},
+                },
+            });
+            var swiper2 = new Swiper('#hotels.swiper-container', {
+                direction: 'horizontal',
+                // loop: true,
+                spaceBetween: 30,
+                pagination: {
+                    el: '#hotels .swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '#hotels .swiper-button-next',
+                    prevEl: '#hotels .swiper-button-prev',
+                },
+            });
+        });
+    </script>
+
+
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+    <script>
+        ScrollOut({
+            threshold: 0.5,
+            onShown: function(element, ctx, scrollingElement) {
+                /* Triggered when an element is shown */
+                element.classList.add("animated");
+
+            }
+        });
+    </script>
+    <script>
+        const slide = document.querySelector('.swiper-slide');
+        const cta__btn = document.querySelector('.cta__btn > button');
+
+
+        cta__btn.addEventListener('click', function() {
+            slide.classList.toggle('active');
+        });
+    </script>
+     <script>
+        const slide = document.querySelector('.swiper-slide');
+        const cta__btn = document.querySelector('.cta__btn > button');
+
+
+        cta__btn.addEventListener('click', function() {
+            slide.classList.toggle('active');
+        });
+    </script>
+
+
+
+</body></html>
